@@ -1,0 +1,21 @@
+#we can use readme file to save the command prompt code or anything for uploading gitbash also to have a clear cut view of how we done and to watch in preview(ctrl+shift+v)
+## End to End ML Project
+### created an virtual evironment(my env)
+~~~
+python -m venv myenv
+~~~
+###
+install all necessary libraries written in requirments.txt
+~~~
+python install -r requirments.txt
+~~~
+### #Requirments.txt file  is used to save and to install all necessary libraries
+~~~
+-e .    #whenever we give new libraries it should install the new libraries so using this for setup.py gets trigger and install
+        #But '-e.' is cannot installable right so we will write few lines in setup.py 
+        #if we does not mention '-e .' in requirments then we will not able to get file of setup.py because there will be no connection blw setup.py and requirments.txt 
+~~~
+### we need to have setup.py file to activate the whole project as package or initializing the packages for which folder we need to have
+~~~
+we will have __init__.py wherever we need to activate packages for individual folder for only the folders we need to make as package
+~~~
