@@ -1,0 +1,9 @@
+[2024-09-10 10:20:51,408]23root-INFO-My data ingestion process starts
+[2024-09-10 10:20:51,455]26root-INFO-Dataset read from pandas
+[2024-09-10 10:20:51,611]32root-INFO-Data Ingestion is completed
+[2024-09-10 10:20:51,612]23root-INFO-Data Transformation is initiated
+[2024-09-10 10:20:51,647]34root-INFO-Numeric PipeLine has started
+[2024-09-10 10:20:51,647]40root-INFO-Categoric Pipeline has started
+[2024-09-10 10:20:51,647]49root-INFO-preprocessor has started
+[2024-09-10 10:20:51,647]56root-INFO-preprocessor has ended
+[2024-09-10 10:20:51,648]97root-INFO-Error occured at complete_data_transformation

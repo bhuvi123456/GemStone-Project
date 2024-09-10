@@ -1,0 +1,3 @@
+[2024-09-10 11:07:48,106]23root-INFO-My data ingestion process starts
+[2024-09-10 11:07:48,132]26root-INFO-Dataset read from pandas
+[2024-09-10 11:07:48,264]32root-INFO-Data Ingestion is completed

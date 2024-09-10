@@ -1,0 +1,23 @@
+[2024-09-10 10:35:10,401]23root-INFO-My data ingestion process starts
+[2024-09-10 10:35:10,430]26root-INFO-Dataset read from pandas
+[2024-09-10 10:35:10,574]32root-INFO-Data Ingestion is completed
+[2024-09-10 10:35:10,575]23root-INFO-Data Transformation is initiated
+[2024-09-10 10:35:10,608]34root-INFO-Numeric PipeLine has started
+[2024-09-10 10:35:10,608]40root-INFO-Categoric Pipeline has started
+[2024-09-10 10:35:10,608]49root-INFO-preprocessor has started
+[2024-09-10 10:35:10,662]67root-INFO-Reading the train and test data done
+[2024-09-10 10:35:10,667]68root-INFO-Train data of first 5 columns   Unnamed: 0  carat        cut color clarity  depth  table     x     y     z  price
+0       22914   0.56      Ideal     E     SI1   62.7   57.0  5.27  5.23  3.29   1698
+1       11368   1.32      Ideal     D    VVS2   59.3   59.0  7.16  7.23  4.27  15802
+2        2251   0.50  Very Good     D     SI2   63.1   56.0  5.05  4.96  3.16   1015
+3        9296   1.05    Premium     H     SI1   62.2   58.0  6.50  6.46  4.03   4682
+4       13850   0.93    Premium     E     SI2   60.5   57.0  6.37  6.32  3.84   4250
+[2024-09-10 10:35:10,674]69root-INFO-Test data of first 5 columns   Unnamed: 0  carat        cut color clarity  depth  table     x     y     z  price
+0       26476   0.51      Ideal     I     SI1   61.7   54.0  5.18  5.19  3.20   1000
+1       20028   0.70  Very Good     E     SI1   62.8   56.0  5.69  5.72  3.58   2239
+2       12920   0.26  Very Good     G    VVS2   62.3   56.0  4.07  4.09  2.54    486
+3       24245   1.51    Premium     F     VS2   62.0   62.0  7.35  7.23  4.52  13771
+4       22353   0.39      Ideal     F    VVS1   61.7   57.0  4.68  4.71  2.89   1148
+[2024-09-10 10:35:10,677]74root-INFO-Splitted the train and test_data
+[2024-09-10 10:35:10,677]75root-INFO-preprocessing the Data
+[2024-09-10 10:35:10,728]96root-INFO-Error occured at complete_data_transformation

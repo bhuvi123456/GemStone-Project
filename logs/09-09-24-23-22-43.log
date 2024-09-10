@@ -1,0 +1,6 @@
+[2024-09-09 23:22:47,478]23root-INFO-My data ingestion process starts
+[2024-09-09 23:22:47,513]26root-INFO-Dataset read from pandas
+[2024-09-09 23:22:47,673]32root-INFO-Data Ingestion is completed
+[2024-09-09 23:22:47,673]23root-INFO-Data Transformation is initiated
+[2024-09-09 23:22:47,673]57root-INFO-Error in Data Transformation
+[2024-09-09 23:22:47,673]96root-INFO-Error occured at complete_data_transformation
