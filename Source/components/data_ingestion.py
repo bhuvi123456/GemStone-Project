@@ -23,6 +23,8 @@ class DataIngestion:
         logging.info("My data ingestion process starts")
         try:
             df = pd.read_csv('notebooks/Data/GemStone.csv')
+            df = df.drop(columns = ['Unnamed: 0'],axis = 1)
+            df = df.drop(columns =['x','y','z','depth'])
             logging.info("Dataset read from pandas")
             os.makedirs(os.path.dirname(self.ingestion_config_data.raw_path),exist_ok=True)
             #df.to_csv(self.ingestion_config_data.raw_path,index = False) #to prevent getting index one more time

@@ -21,9 +21,6 @@ class DataTransformation:
     def initialize_data_transformation(self):
         try:
             logging.info("Data Transformation is initiated")
-            df = pd.read_csv('notebooks/Data/GemStone.csv')
-            df = df.drop(columns = ['Unnamed: 0'],axis = 1)
-            df = df.drop(columns =['x','y','z','depth'])
             num_features = df.select_dtypes(exclude = 'O').columns.drop('price')
             print('num_features:',list(num_features))
             cat_features = [features for features in df.columns if df[features].dtype == 'O']
