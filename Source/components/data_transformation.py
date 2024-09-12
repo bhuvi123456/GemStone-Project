@@ -21,6 +21,9 @@ class DataTransformation:
     def initialize_data_transformation(self):
         try:
             logging.info("Data Transformation is initiated")
+            df = pd.read_csv('notebooks/Data/GemStone.csv')
+            df = df.drop(columns = ['Unnamed: 0'],axis = 1)
+            df = df.drop(columns =['x','y','z','depth'])
             num_features = df.select_dtypes(exclude = 'O').columns.drop('price')
             print('num_features:',list(num_features))
             cat_features = [features for features in df.columns if df[features].dtype == 'O']
@@ -40,7 +43,7 @@ class DataTransformation:
         ('SimpleImputer:',SimpleImputer(strategy = 'most_frequent')),
         ('OrdinalEncoder:',OrdinalEncoder(categories=[cut_categories,color_categories,clarity_categories])),
         ("StandardScaler:",StandardScaler()) #we are Performing scaling also because if i have 10 different data's in my 
-        #categorical variable ten i will have ranking from 1 to 10 then to increase accuracy we use scaling to make it from 0 to 1
+        #In categorical variable i will have ranking from 1 to 10 then to increase accuracy we use scaling to make it from 0 to 1
     ]
 )
             logging.info("preprocessor has started")
@@ -50,8 +53,9 @@ class DataTransformation:
         ("categoric_pipeline:", categoric_pipeline,cat_features)
         ]
 )
-            return preprocessor
+            
             logging.info("preprocessor has ended")
+            return preprocessor
         except Exception as e:
             logging.info("Error in Data Transformation")
             pass
@@ -75,10 +79,12 @@ class DataTransformation:
             #if i have huge data then using pandas may take more time to load so we will convert into numpy
             train_arr = np.c_[input_feature_train_df,np.array(output_feature_train_df)]
             test_arr = np.c_[input_feature_test_df,np.array(output_feature_test_df)]
+            logging.info(f"Saving preprocessor object to {self.Data_transformation_config_data.preprocessor_path}")
             save_object(
                 file_path = self.Data_transformation_config_data.preprocessor_path,
                 obj = preprocessor_obj
             )
+            logging.info("Preprocessor object saved successfully")
             
             logging.info("Preprocessing Data is Saved")
             return (
